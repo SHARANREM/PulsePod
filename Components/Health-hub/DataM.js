@@ -179,6 +179,7 @@ async function viewMyTips() {
     }
 }
 async function searchTipsByUsername() {
+    console.log("working");
     const searchQuery = searchBar.value.toLowerCase(); // Get the search input and convert to lowercase
     const ref = collection(db, "HealthTipList");
 
