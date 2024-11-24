@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulsePod-Pomodoro</title>
+    <link rel="icon" href="/assets/cardiogram.png" type="image/png">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <div class="preloader">
+        <img src="/assets/cardiogram.png" alt="PulsePod">
+    </div>
+    <div class="home">
+        <div class="home-navigation">
+            <h1 id="check">PulsePod</h1>
+            <div class="menu">
+                <img src="/assets/menu (1).png" alt="Menu" title="Menu" id="menu">
+                <ul class="menu-list" id="menu-list">
+                    <li><a href="/Components/Home/Home.html">Home</a></li>
+                    <li><a href="/Components/Task-Manager/task-manager.html">Task Manager</a></li>
+                    <li><a href="/Components/Health-hub/health-hub.html">Health Hub</a></li>
+                    <li><a href="/Components/Education-hub/Education-hub.html">Education Hub</a></li>
+                    <li><a href="/Components/Motivation/motivation.html">Motivation</a></li>
+                    <li id="myProfile"><a href="#">My Profile</a></li>
+                    <li id="signoutbtn"><a href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="userCred">
+            <img src="/assets/close (1).png" alt="Close" title="Close" id="userCred-close-btn" width="20px"
+                height="20px">
+            <h1 id="userCred-Username"></h1>
+        </div>
+        <div class="pomodoro-container">
+            <div class="pomodoro-container-out">
+                <div class="pomodoro-container-out-mid">
+                    <div class="pomodoro-container-out-mid-inside">
+                        <h4 id="present-work">Work</h4>
+                        <button id="pomodoro-music-btn">Music?</button>
+                        <h1 id="pomodoro-time">25:00</h1>
+                        <div class="pomodoro-container-out-mid-inside-controls">
+                            <button id="play-pause-btn"><img src="/assets/play-button-arrowhead (1).png"
+                                    alt="Play/Pause" title="Play/Pause" width="35px" height="35px"></button>
+                            <button id="pomodoro-settings"><img src="/assets/setting (1).png" alt="Settings"
+                                    title="Settings" width="35px" height="35px"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pomodoro-container-settings-tab">
+                <img src="/assets/close (1).png" alt="Close" title="Close" id="pomodoro-container-settings-tab-close"
+                    width="25px" height="25px">
+                <div class="pomodoro-container-settings-tab-top">
+                    <h1>Settings</h1>
+                </div>
+                <div class="pomodoro-container-settings-tab-mid">
+                    <h2>Time Updates</h2>
+                    <input type="number" name="number" id="pomodoro-work-min-time" placeholder="Work time in min"
+                        min="1" max="1440">
+                    <input type="number" name="number" id="pomodoro-rest-min-time" placeholder="Rest time in min"
+                        min="1" max="1440">
+                </div>
+                <div class="pomodoro-container-settings-tab-bot">
+                    <button id="pomodoro-update-time">Update</button>
+                </div>
+            </div>
+            <div class="pomodoro-container-music-tab">
+                <img src="/assets/close (1).png" alt="Close" title="Close" id="pomodoro-container-music-tab-close"
+                    width="25px" height="25px">
+                <div class="pomodoro-container-music-tab-top">
+                    <h1>Music</h1>
+                </div>
+                <div class="pomodoro-container-music-tab-musiclist">
+                    <ul>
+                        <li>
+                            <h3>None</h3><button id="Play-None"><img src="/assets/play-button-arrowhead (1).png"
+                                    width="50px" height="50px" alt="None" title="None"></audio></button>
+                        </li>
+                        <li>
+                            <h3>Brown Noise</h3><button id="Play-brown-noise"><img
+                                    src="/assets/play-button-arrowhead (1).png" width="50px" height="50px" alt="Play"
+                                    title="Play"></button><audio src="/assets/Music/brown.mp3" id="Music1"></audio>
+                        </li>
+                        <li>
+                            <h3>White Noise</h3><button id="Play-white-noise"><img
+                                    src="/assets/play-button-arrowhead (1).png" width="50px" height="50px" alt="Play"
+                                    title="Play"></button><audio src="/assets/Music/white.mp3" id="Music2"></audio>
+                        </li>
+                        <li>
+                            <h3>Pink Noise</h3><button id="Play-pink-noise"><img
+                                    src="/assets/play-button-arrowhead (1).png" alt="Play" title="Play" width="50px"
+                                    height="50px"></button><audio src="/assets/Music/pink.mp3" id="Music3"></audio>
+                        </li>
+                        <li>
+                            <h3>Rain</h3><button id="Play-rain-noise"><img src="/assets/play-button-arrowhead (1).png"
+                                    width="50px" height="50px" alt="Play" title="Play"></button><audio
+                                src="/assets/Music/rain.mp3" id="Music4"></audio>
+                        </li>
+                        <li>
+                            <h3>Birds</h3><button id="Play-birds-noise"><img src="/assets/play-button-arrowhead (1).png"
+                                    width="50px" height="50px" alt="Play" title="Play"></button><audio
+                                src="/assets/Music/birds.mp3" id="Music5"></audio>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="settings.js"></script>
+    <script src="pomodoro.js"></script>
+    <script>
+        let userCreds = JSON.parse(sessionStorage.getItem("user-creds"));
+        let userInfo = JSON.parse(sessionStorage.getItem("user-insfo"))
+
+        let msgHead = document.getElementById('userCred-Username');
+        let SignoutBtn = document.getElementById('signoutbtn');
+
+        let Signout = () => {
+            sessionStorage.removeItem("user-creds");
+            sessionStorage.removeItem("user-insfo");
+            window.location.href = "/index.html";
+        }
+
+        let checkedCred = () => {
+            if (!sessionStorage.getItem("user-creds")) {
+                window.location.href = "/index.html";
+            }
+            else {
+                msgHead.innerText = `Username: ${userInfo.Username}`;
+            }
+        }
+
+        window.addEventListener('load', checkedCred);
+        SignoutBtn.addEventListener('click', Signout);
+
+    </script>
+</body>
+
+</html>

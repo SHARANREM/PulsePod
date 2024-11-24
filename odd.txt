@@ -1,0 +1,341 @@
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>
+                <div class="task-manager-container-task-item">
+                    <h3 id="item-title">
+                        Title
+                    </h3>
+                    <div class="task-manager-container-task-item-details">
+                        <h5 id="item-tag">Tag</h5>
+                        <h5 id="item-priority">Priority</h5>
+                        <h5 id="item-date">Date</h5>
+                        <h5 id="item-status">Status</h5>
+                    </div>
+                </div>

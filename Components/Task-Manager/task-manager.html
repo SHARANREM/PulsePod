@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulsePod-Task-Manager</title>
+    <link rel="icon" href="/assets/cardiogram.png" type="image/png">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <div class="preloader">
+        <img src="/assets/cardiogram.png" alt="PulsePod">
+    </div>
+    <div class="home">
+        <div class="home-navigation">
+            <h1 id="check">PulsePod</h1>
+            <div class="menu">
+                <img src="/assets/menu (1).png" alt="Menu" title="Menu" id="menu">
+                <ul class="menu-list" id="menu-list">
+                    <li><a href="/Components/Home/Home.html">Home</a></li>
+                    <li><a href="/Components/Health-hub/health-hub.html">Health-hub</a></li>
+                    <li><a href="/Components/Education-hub/Education-hub.html">Education Hub</a></li>
+                    <li><a href="/Components/Pomodoro/pomodoro.html">Pomodoro</a></li>
+                    <li><a href="/Components/Motivation/motivation.html">Motivation</a></li>
+                    <li id="myProfile"><a href="#">My Profile</a></li>
+                    <li id="signoutbtn"><a href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="userCred">
+            <img src="/assets/close (1).png" alt="Close" title="Close" id="userCred-close-btn" width="20px"
+                height="20px">
+            <h1 id="userCred-Username"></h1>
+        </div>
+        <div class="task-manager-container">
+            <div class="task-manager-container-nav">
+                <input type="text" id="task-search-bar" placeholder="Search Tasks">
+                <button id="task-delete-completed-tasks">Delete completed tasks</button>
+                <button id="task-add-task-btn"><img src="/assets/add (1).png" alt="Add task" width="25px"
+                        height="25px"></button>
+                <h1 id="task-status-marks">Done: <span>999/999</span></h1>
+                <select id="task-filter-btn">
+                    <option value="Filter by">Filter by</option>
+                    <option value="Date">Date</option>
+                    <option value="Status">Status</option>
+                    <option value="Priority">Priority</option>
+                    <option value="Tags">Tags</option>
+                </select>
+            </div>
+            <div class="task-manager-container-task-grid t-m-item-cont">
+            </div>
+            <div class="task-manager-task-expanded-view">
+                <button id="task-expand-close-btn"><img src="/assets/close (1).png" alt="Close" width="20px"
+                        height="20px"></button>
+                <h1 id="expanded-title"></h1>
+                <h6 id="itsid" style="display: none;"></h6>
+                <p id="expanded-description"></p>
+                <div class="task-edit-con">
+                    <button id="task-edit-btn"><img src="/assets/compose (1).png" alt="Edit"></button>
+                    <button id="task-delete-btn"><img src="/assets/dustbin (1).png" alt="Delete"></button>
+                </div>
+                <div class="expanded-task-manager-container-task-item-details">
+                    <h5 id="item-tag"></h5>
+                    <h5 id="item-priority"></h5>
+                    <h5 id="item-date"></h5>
+                    <h5 id="item-status"></h5>
+                </div>
+            </div>
+        </div>
+        <div class="task-manager-task-add-slide">
+            <img src="/assets/close (1).png" alt="Close" id="task-m-close-slide-btn" width="20px" height="20px">
+            <div class="task-manager-task-add-slide-top">
+                <h1>Task</h1>
+            </div>
+            <div class="task-manager-task-add-slide-mid">
+                <h2>TASK</h2>
+                <h3>Specify your task</h3>
+                <div class="task-manager-task-add-slide-mid-1">
+                    <input type="text" id="task-m-title-input" placeholder="Title">
+                    <select id="task-m-priority-input">
+                        <option value="Priority">Priority</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                        <option value="Extreme">Extreme</option>
+                    </select>
+                </div>
+                <div class="task-manager-task-add-slide-mid-2">
+                    <textarea id="task-m-description-input" cols="30" rows="5" placeholder="Description"></textarea>
+                </div>
+                <div class="task-manager-task-add-slide-mid-3">
+                    <select id="task-m-tag-input">
+                        <option value="Tag">Tag</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Office">Office</option>
+                        <option value="Friends">Friends</option>
+                        <option value="Learning">Learning</option>
+                        <option value="Gaming">Gaming</option>
+                        <option value="Health">Health</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <input type="date" id="task-m-date-input">
+                </div>
+                <div class="task-manager-task-add-slide-mid-4">
+                    <select id="task-m-status-input">
+                        <option value="Status">Status</option>
+                        <option value="Done">Done</option>
+                        <option value="Not-Done">Not Done</option>
+                        <option value="In-Progress">In Progress</option>
+                        <option value="Abandoned">Abandoned</option>
+                        <option value="Hold">Hold</option>
+                        <option value="Has-Doubts">Has Doubts</option>
+                    </select>
+                </div>
+            </div>
+            <div class="task-manager-task-add-slide-bot">
+                <button id="task-m-create-task-btn">
+                    Create Task
+                </button>
+            </div>
+        </div>
+        <div class="task-manager-task-edit-slide">
+            <img src="/assets/close (1).png" alt="Close" id="task-m-close-edit-slide-btn" width="20px" height="20px">
+            <div class="task-manager-task-add-slide-top">
+                <h1>Task</h1>
+            </div>
+            <div class="task-manager-task-edit-slide-mid">
+                <h2>EDIT TASK</h2>
+                <h3>Edit your task</h3>
+                <div class="task-manager-task-add-slide-mid-1">
+                    <input type="text" id="task-m-title-input-edit" placeholder="Title">
+                    <select id="task-m-priority-input-edit">
+                        <option value="Priority">Priority</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                        <option value="Extreme">Extreme</option>
+                    </select>
+                </div>
+                <div class="task-manager-task-add-slide-mid-2">
+                    <textarea id="task-m-description-input-edit" cols="30" rows="5"
+                        placeholder="Description"></textarea>
+                </div>
+                <div class="task-manager-task-add-slide-mid-3">
+                    <select id="task-m-tag-input-edit">
+                        <option value="Tag">Tag</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Office">Office</option>
+                        <option value="Friends">Friends</option>
+                        <option value="Learning">Learning</option>
+                        <option value="Gaming">Gaming</option>
+                        <option value="Health">Health</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <input type="date" id="task-m-date-input-edit">
+                </div>
+                <div class="task-manager-task-add-slide-mid-4">
+                    <select id="task-m-status-input-edit">
+                        <option value="Status">Status</option>
+                        <option value="Done">Done</option>
+                        <option value="Not-Done">Not Done</option>
+                        <option value="In-Progress">In Progress</option>
+                        <option value="Abandoned">Abandoned</option>
+                        <option value="Hold">Hold</option>
+                        <option value="Has-Doubts">Has Doubts</option>
+                    </select>
+                </div>
+            </div>
+            <div class="task-manager-task-add-slide-bot">
+                <h6 id="this-things-id" style="display: none;"></h6>
+                <button id="task-m-create-task-btn-ok">
+                    Edit Task
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="Storage.js" type="module"></script>
+    <script src="task-manager.js"></script>
+    <script>
+        let userCreds = JSON.parse(sessionStorage.getItem("user-creds"));
+        let userInfo = JSON.parse(sessionStorage.getItem("user-insfo"));
+
+        let msgHead = document.getElementById('userCred-Username');
+        let SignoutBtn = document.getElementById('signoutbtn');
+
+        let Signout = () => {
+            sessionStorage.removeItem("user-creds");
+            sessionStorage.removeItem("user-insfo");
+            window.location.href = "/index.html";
+        }
+
+        let checkedCred = () => {
+            if (!sessionStorage.getItem("user-creds")) {
+                window.location.href = "/index.html";
+            }
+            else {
+                msgHead.innerText = `Username: ${userInfo.Username}`;
+            }
+        }
+
+        window.addEventListener('load', checkedCred);
+        SignoutBtn.addEventListener('click', Signout);
+
+    </script>
+</body>
+
+</html>

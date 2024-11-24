@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulsePod</title>
+    <link rel="icon" href="/assets/cardiogram.png" type="image/png">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <div class="preloader">
+        <img src="/assets/cardiogram.png" alt="PulsePod">
+    </div>
+    <div class="home">
+        <div class="home-navigation">
+            <h1 id="check">PulsePod</h1>
+            <div class="menu">
+                <img src="/assets/menu (1).png" alt="Menu" title="Menu" id="menu">
+                <ul class="menu-list" id="menu-list">
+                    <li><a href="/Components/Task-Manager/task-manager.html">Task Manager</a></li>
+                    <li><a href="/Components/Health-hub/health-hub.html">Health Hub</a></li>
+                    <li><a href="/Components/Education-hub/Education-hub.html">Education Hub</a></li>
+                    <li><a href="/Components/Pomodoro/pomodoro.html">Pomodoro</a></li>
+                    <li><a href="/Components/Motivation/motivation.html">Motivation</a></li>
+                    <li id="myProfile"><a href="#">My Profile</a></li>
+                    <li id="signoutbtn"><a href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="userCred">
+            <img src="/assets/close (1).png" alt="Close" title="Close" id="userCred-close-btn" width="20px"
+                height="20px">
+            <h1 id="userCred-Username"></h1>
+        </div>
+        <div class="home-hero-section">
+            <img src="/assets/health.png" class="home-hero-section-top">
+            <h1>PulsePod</h1>
+            <img src="/assets/health.png" class="home-hero-section-bot">
+            <h3>Your Globalized Tip Buddy</h3>
+            <a href="/Components/Health-hub/health-hub.html"><button id="hero-section-button">Get Started</button></a>
+        </div>
+        <div class="home-what-we-do-section">
+            <h1>What This does?</h1>
+            <div class="home-what-we-do-section-grid">
+
+                <div class="home-what-we-do-section-grid-pomodoro">
+                    <img src="/assets/Pomo-index.jpg" alt="Pomodoro-image">
+                    <h2>Pomodoro</h2>
+                    <h3>Be productive with pomodoro</h3>
+                </div>
+                <div class="home-what-we-do-section-grid-taskM">
+                    <img src="/assets/Task-index.jpg" alt="task-image">
+                    <h2>Task Manager</h2>
+                    <h3>Schedule your task</h3>
+                </div>
+
+                <div class="home-what-we-do-section-grid-Education">
+                    <img src="/assets/Education-index.jpg" alt="Education-image">
+                    <h2>Education Hub</h2>
+                    <h3>Don't know what to learn? Have a tip</h3>
+                </div>
+                <div class="home-what-we-do-section-grid-health">
+                    <img src="/assets/Health-index.jpg" alt="Healthhub-image">
+                    <h2>Health Hub</h2>
+                    <h3>Want a tip for heath?</h3>
+                </div>
+                <div class="home-what-we-do-section-grid-Updates">
+                    <img src="/assets/substitue.jpg" alt="Updates-image">
+                    <h2>Updates?</h2>
+                    <h3>Will have a PulsePod v2.0 sooner with a lot of things!!</h3>
+                </div>
+            </div>
+        </div>
+        <div class="home-about-us-section">
+            <h1>About Us</h1>
+            <div class="home-about-us-section-contents">
+                <div class="home-about-us-section-contents-left">
+                    <p>We believe that good health is the foundation of a fulfilling life. Whether you're seeking tips
+                        on nutrition, fitness, mental health, or managing chronic conditions, our platform is here to
+                        guide you every step of the way.</p>
+                    <h2>Our Members</h2>
+                    <div class="home-about-us-section-contents-left-members">
+                        <a href="https://devpost.com/sairohith250704" target="_blank"> <button>Designer</button></a>
+                        <a href="https://devpost.com/sharanplm?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav"
+                            target="_blank"><button>Developer</button></a>
+                    </div>
+                </div>
+                <div class="home-about-us-section-contents-right">
+                    <img src="/assets/image 2.png" alt="Slider">
+                </div>
+            </div>
+        </div>
+        <div class="home-about-us-card">
+            <img src="/assets/Pulsepod 1.png" alt="Our Card">
+        </div>
+        <footer>
+            <h2>Copyright @ 2024</h2>
+            <h2>All Rights Reserved</h2>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        let userCreds = JSON.parse(sessionStorage.getItem("user-creds"));
+        let userInfo = JSON.parse(sessionStorage.getItem("user-insfo"))
+
+        let msgHead = document.getElementById('userCred-Username');
+        let SignoutBtn = document.getElementById('signoutbtn');
+
+        let Signout = () => {
+            sessionStorage.removeItem("user-creds");
+            sessionStorage.removeItem("user-insfo");
+            window.location.href = "/index.html";
+        }
+
+        let checkedCred = () => {
+            if (!sessionStorage.getItem("user-creds")) {
+                window.location.href = "/index.html";
+            }
+            else {
+                msgHead.innerText = `Username: ${userInfo.Username}`;
+            }
+        }
+
+        window.addEventListener('load', checkedCred);
+        SignoutBtn.addEventListener('click', Signout);
+
+    </script>
+</body>
+
+</html>

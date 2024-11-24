@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+*{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+//Colors
+$colors : (
+    'body-bg':#898989,
+    'main-bg':#212121,
+    'bg':#000000d3,
+    'bla':black,
+    'card':#1A1A1A,
+    'text':#FFFFFF,
+    'htype':#00FFCC,
+    'text-light':#ffffff56,
+    'black-glass':rgba(0, 0, 0, 0.500),
+);
+
+//font
+$font:"Kodchasan", sans-serif;
+
+@mixin deffont($size,$weight){
+    font-family: $font;
+    font-size: $size;
+    font-weight: $weight;
+    color: col(text);
+}
+
+//Functions
+@function col($color){
+    @return map-get($map: $colors, $key:$color );
+}
+
+//Responsive mixins
+@mixin mLaptop(){
+    @media (max-width:1024px){
+        @content;
+    }
+}
+@mixin tablet(){
+    @media all and (max-width:780px){
+        @content;
+    }
+}
+@mixin tabletmid(){
+    @media all and (max-width:550px){
+        @content;
+    }
+}
+@mixin lMobile(){
+    @media all and (max-width:450px){
+        @content;
+    }
+}
+@mixin mMobile(){
+    @media all and (max-width:400px){
+        @content;
+    }
+}
+@mixin sMobile(){
+    @media all and (max-width:350px){
+        @content;
+    }
+}

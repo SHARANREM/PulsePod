@@ -1,0 +1,403 @@
+.home{
+    .pomodoro-container{
+        background-color: col(bla);
+        width: 70%;
+        height: 80vh;
+        position: relative;
+        top: 45%;
+        border-radius: 30px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+        transition: .2s ease;
+        &-out{
+            background-color: col(bg);
+            width: 600px;
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: .2s ease-in-out;
+            &-mid{
+                background-color: col(text);
+                width: 95%;
+                height: 95%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                transition: .2s ease-in-out;
+                &-inside{
+                    background-color: col(bg);
+                    width: 93%;
+                    height: 93%;
+                    display: flex;
+                    padding: 25px;
+                    border-radius: 50%;
+                    gap: 10px;
+                    align-items: center;
+                    overflow: hidden;
+                    flex-direction: column;
+                    transition: .2s ease-in-out;
+                    h4{
+                        text-align: center;
+                        font-family: $font;
+                        color: col(text);
+                        font-weight: 400;
+                        font-size: 1.1em;
+                        transition: .2s ease-in-out;
+                    }
+                    #pomodoro-music-btn{
+                        width: 30%;
+                        margin-top: 5px;
+                        border-radius: 20px;
+                        height: 10%;
+                        background-color: col(text-light);
+                        text-align: center;
+                        font-family: $font;
+                        color: col(text);
+                        font-weight: 400;
+                        font-size: 1.1em;
+                        border: none;
+                        cursor: pointer;
+                        transition: .2s ease;
+                        &:hover{
+                            background-color: col(bg);
+                        }
+                    }
+                    h1{
+                        font-family: $font;
+                        font-size: 6.5em;
+                        color: col(text);
+                        font-weight: 300;
+                        margin-top: 20px;
+                        transition: .2s ease-in-out;
+                    }
+                    .pomodoro-container-out-mid-inside-controls{
+                        display: flex;
+                        gap: 30px;
+                        transition: .2s ease-in-out;
+                        #play-pause-btn{
+                            width: 200px;
+                            transition: .2s ease-in-out;
+                            border-radius: 50px;
+                        }
+                        button{
+                            background-color: col(text-light);
+                            border: none;
+                            padding: 10px;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            transition: .2s ease;
+                            &:hover{
+                                background-color: col(bg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-settings-tab{
+            display: none;
+            background-color: col(main-bg);
+            width: 70%;
+            border-radius: 20px;
+            overflow: hidden;
+            padding: 10px;
+            flex-direction: column;
+            justify-content: center;
+            transition: .2s ease;
+            img{
+                position: relative;
+                top: 10px;
+                left: 10px;
+                transition: .2s ease;
+                cursor: pointer;
+            }
+            &-top{
+                flex-grow: 1;
+                text-align: center;
+                font-family: $font;
+                font-size: 1.1em;
+                color: col(text);
+                position: relative;
+                border-bottom: 2px solid gray;
+                transition: .2s ease;
+            }
+            &-mid{
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+                transition: .2s ease;
+                h2{
+                    font-family: $font;
+                    color: col(text);
+                    font-size: 2em;
+                    font-weight: 300;
+                    transition: .2s ease;
+                    margin-bottom: 10px;
+                }
+                input{
+                    outline: none;
+                    border: none;
+                    margin-bottom: 10px;
+                    height: 50px;
+                    transition: .2s ease;
+                    border-radius: 10px;
+                    padding: 20px;
+                    font-family: $font;
+                    color: white;
+                    background-color: col(text-light);
+                    font-size: 1.3em;
+                    &::placeholder{
+                        color: col(text);
+                    }
+                }
+
+            }
+            &-bot{
+                display: flex;
+                padding: 10px;
+                transition: .2s ease;
+                height: 70px;
+                button{
+                    flex-grow: 1;
+                    background-color: col(bg);
+                    border: none;
+                    color: col(text);
+                    font-family: $font;
+                    transition: .2s ease;
+                    border-radius: 10px;
+                    font-size: 1.3em;
+                    &:hover{
+                        background-color: col(text-light);
+                    }
+                }
+            }
+        }
+        &-music-tab{
+            display: none;
+            flex-direction: column;
+            background-color: col(main-bg);
+            width: 70%;
+            padding: 20px;
+            border-radius: 20px;
+            img{
+                position: relative;
+                top: 10px;
+                cursor: pointer;
+                left: 10px;
+            }
+            &-top{
+                position: relative;
+                text-align: center;
+                font-family: $font;
+                font-size: 1.3em;
+                color: col(text);
+                border-bottom: 2px solid gray;
+            }
+            &-musiclist{
+                ul{
+                    margin-top: 5px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    li{
+                        border-radius: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 5px 20px;
+                        background-color: col(text-light);
+                        h3{
+                            font-family: $font;
+                            color: col(text);
+                        }
+                        button{
+                            background-color: col(bg);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 50px;
+                            height: 50px;
+                            cursor: pointer;
+                            border-radius: 50%;
+                            border: none;
+                            img{
+                                position: relative;
+                                top: 25%;
+                                left: 30%;
+                                transform: translate(-50%,-50%);
+                                width: 25px;
+                                height: 25px;
+                            }
+                        }
+                        transition: .2s ease;
+                        &:hover{
+                            background-color: col(main-bg);
+                        }
+                    }
+                }
+            }
+        }
+        @include mLaptop(){
+            width: 90%;
+            
+        }
+        @include tablet(){
+            &-out{
+                width: 400px;
+                height: 75%;
+                &-mid{
+                    &-inside{
+                        gap: 5px;
+                        h4{
+                            font-size: 1em;
+                        }
+                        h1{
+                            font-size: 4.5em;
+                        }
+                        .pomodoro-container-out-mid-inside-controls{
+                            flex-direction: column;
+                            gap: 40px;
+                            #play-pause-btn{
+                                width: 150px;
+                            }
+                        }
+                    }
+                }
+            }
+            &-settings-tab{
+            &-top{
+                font-size: 1em;
+            }
+            &-mid{
+                h2{
+                    font-size: 1.5em;
+                }
+                input{
+                    font-size: 1em;
+                }
+
+            }
+            &-bot{
+                button{
+                    font-size: 1em;
+                }
+            }
+
+            }
+        }
+        @include lMobile(){
+            align-items: center;
+            &-out{
+                width: 300px;
+                height: 99%;
+                border-radius: 30px;
+                &-mid{
+                    border-radius: 30px;
+                    &-inside{
+                        width: 95%;
+                        height: 97%;
+                        border-radius: 30px;
+                        gap: 5px;
+                        h4{
+                            font-size: 1.1em;
+                        }
+                        #pomodoro-music-btn{
+                            width: 70%;
+                        }
+                        h1{
+                            font-size: 5em;
+                            margin-top: 40px;
+                        }
+                        .pomodoro-container-out-mid-inside-controls{
+                            flex-direction: column;
+                            gap: 30px;
+                            margin-top: 30px;
+                            #play-pause-btn{
+                                width: 200px;
+                            }
+                            button{
+                                border-radius: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+            &-settings-tab{
+            width: 90%;
+            &-top{
+                font-size: .9em;
+            }
+            &-mid{
+                margin-top: 5px;
+                padding: 0px;
+                h2{
+                    font-size: 1.3em;
+                }
+                input{
+                    font-size: 1em;
+                    width: 100%;
+                }
+
+            }
+            &-bot{
+                padding: 10px 0px;
+                button{
+                    font-size: 1.3em;
+                }
+            }
+
+            }
+            &-music-tab{
+                width: 90%;
+                padding: 10px;
+            }
+
+        }
+        @include mMobile(){
+            align-items: center;
+            &-out{
+                width: 270px;
+                height: 99%;
+                border-radius: 20px;
+                &-mid{
+                    width: 95%;
+                    border-radius: 20px;
+                    &-inside{
+                        width: 95%;
+                        height: 97%;
+                        border-radius: 20px;
+                        gap: 5px;
+                        h4{
+                            font-size: 1.1em;
+                        }
+                        h1{
+                            font-size: 5em;
+                            margin-top: 40px;
+                        }
+                        .pomodoro-container-out-mid-inside-controls{
+                            flex-direction: column;
+                            gap: 30px;
+                            margin-top: 30px;
+                            #play-pause-btn{
+                                width: 200px;
+                            }
+                            button{
+                                border-radius: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

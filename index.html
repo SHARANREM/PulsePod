@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulsePod</title>
+    <link rel="icon" href="/assets/cardiogram.png" type="image/png">
+    <link rel="stylesheet" href="/css/main.css">
+
+</head>
+
+<body>
+    <div class="preloader">
+        <img src="/assets/cardiogram.png" alt="PulsePod">
+    </div>
+    <div class="home">
+        <div class="home-navigation">
+            <h1 id="check">PulsePod</h1>
+            <div class="menu">
+                <img src="/assets/menu (1).png" alt="Menu" title="Menu" id="menu">
+                <ul class="menu-list" id="menu-list">
+                    <li id="Login-btn"><a href="#">Login</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="login-sigin" id="login-sigin">
+            <div class="login">
+                <img src="/assets/close (1).png" class="close-btn" alt="Close" title="Close" width="15px" height="15px">
+                <div class="login-top">
+                    <h1>Login</h1>
+                </div>
+                <div class="login-mid">
+                    <h2>Login</h2>
+                    <h3>Please Log-in</h3>
+                    <div class="inputs">
+                        <input type="email" placeholder="Email" id="emaill">
+                        <input type="password" placeholder="Password" id="passwordl">
+                    </div>
+                    <button id="login-btn-primary">Login</button>
+                </div>
+                <div class="login-bot">
+                    <h4>Don't have an account? <span id="signin-slide">Signup</span></h4>
+                </div>
+            </div>
+            <div class="signup">
+                <img src="/assets/close (1).png" class="close-btn" alt="Close" title="Close" width="15px" height="15px">
+                <div class="signup-top">
+                    <h1>Register</h1>
+                </div>
+                <div class="signup-mid">
+                    <h2>Register</h2>
+                    <h3>Create an accoutn</h3>
+                    <div class="inputs">
+                        <input type="text" placeholder="Username" id="username">
+                        <input type="email" placeholder="Email" id="emails">
+                        <input type="password" placeholder="Password" id="passwords">
+                    </div>
+                    <button id="signin-btn-primary">Register</button>
+                </div>
+                <div class="signup-bot">
+                    <h4>Already have an account? <span id="login-slide">Login</span></h4>
+                </div>
+            </div>
+        </div>
+        <div class="slide" id="slide">
+            <h1>PulsePod<span>.</span></h1>
+            <h2>Empowering You with Real-Time Health Insights for a Happier, Healthier Life</h2>
+            <button id="login-slide-btn">Login</button>
+        </div>
+    </div>
+    <div id="particles-js"></div>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+    <script type="module" src="firebase.js" defer></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

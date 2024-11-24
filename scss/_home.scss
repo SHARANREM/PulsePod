@@ -1,0 +1,697 @@
+@import "resets";
+@mixin logindesign($dis){
+    width: 95%;
+    padding: 10px 0;
+    margin: auto;
+    display: $dis;
+    border-radius: 20px;
+    background-color: col(card);
+    img{
+        z-index: 2;
+        position: relative;
+        top: 20px;
+        left: 5%;
+        cursor: pointer;
+    }
+    &-top{
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        border-bottom: 2px solid col(main-bg);
+        h1{
+            z-index: 2;
+            @include deffont(1.7em,300);
+        }
+    }
+    &-mid{
+        z-index: 2;
+        padding: 10px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        h2{
+            z-index: 2;
+            @include deffont(2em,600);
+        }
+        h3{
+            z-index: 2;
+            @include deffont(1.2em,100);
+        }
+        .inputs{
+            z-index: 2;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            input{
+                z-index: 2;
+                padding: 0 20px;
+                border: none;
+                border-radius: 10px;
+                height: 50px;
+                @include deffont(1.4em,200);
+                background-color: col(main-bg);
+                &:focus{
+                    border: 2px solid rgb(73, 73, 73);
+                    outline: none;
+                    box-shadow: none;
+                } 
+            }
+        }
+        button{
+            z-index: 2;
+            height: 50px;
+            margin-top: 30px;
+            background-color: col(bg);
+            @include deffont(1.3em,500);
+            border: none;
+            border-radius: 10px;
+            transition: .2s ease;
+            &:hover{
+                z-index: 2;
+                background-color: col(black-glass);
+            }
+        }
+    }
+    &-bot{
+        z-index: 200;
+        text-align: center;
+        @include deffont(1em,200);
+        h4{
+            z-index: 100;
+            span{
+                z-index: 20;
+                text-decoration: underline white;
+                cursor: pointer;
+            }
+        }
+    }
+    @include mMobile(){
+        &-mid{
+            padding: 10px 15px;
+            h2{
+                z-index: 2;
+                @include deffont(1.5em,600);
+            }
+            h3{
+                z-index: 2;
+                @include deffont(1em,100);
+            }
+            .inputs{
+                input{
+                    padding: 0 10px;
+                    @include deffont(1em,200);
+                }
+            }
+        }
+    }
+}
+@mixin menudesign(){
+    display: none;
+    right: 2%;
+    border-radius: 15px;
+    position: absolute;
+    background-color: col(bla);
+    padding: 15px 5px;
+    
+    li{
+        z-index: 3000;
+        list-style: none;
+        padding: 20px;
+        margin-top: 5px;
+        transition: .2s ease;
+        a{
+            z-index: 3000;
+            color: col(text);
+            text-decoration: none;
+            font-family: $font;
+            font-weight: 600;
+        }
+        &:hover{
+            background-color: lighten(col(bg),30%);
+        }
+    }
+}
+#particles-js{
+    width: 100%;
+    position: absolute;
+    height: 100vh;
+    z-index: -1;
+    top: -3.6px;
+}
+.home{
+    background-color: transparent;
+    width: 100%;
+    height: 100vh;
+    z-index: 3000;
+    display: none;
+    &-navigation{   
+        z-index: 200000;
+        display: flex;
+        background-color: col(bla);
+        width: 60%;
+        position: relative;
+        margin: auto;
+        padding: 10px 30px;
+        border-radius: 30px;
+        align-items: center;
+        justify-content: space-between;
+        top: 10px;
+        transition: .2s ease-in-out;
+        h1{
+            cursor: default;
+            font-family: $font;
+            color: col(text);
+            font-weight: 700;
+            font-size: 1.4em;
+            letter-spacing: 2px;
+        }
+        .menu{
+            transition: .9s ease;
+            display: block;
+            img{
+                cursor: pointer;
+                transition: .3s ease;
+            }
+            &-list{
+                @include menudesign();
+            }
+            &-list-logged{
+                @include menudesign();
+            }
+        }
+        @include lMobile(){
+            width: 80%;
+            h1{
+                font-size: 1em;
+            }
+        }
+    }
+    .login-sigin{
+        z-index: 2;
+        width: 50%;
+        margin: 30px auto;
+        border-radius: 20px;
+        padding: 10px;
+        overflow: hidden;
+        display: none;
+        .login{
+            z-index: 2;
+            @include logindesign(block);
+        }
+        .signup{
+            z-index: 2;
+            @include logindesign(none);
+        }
+        @include tablet(){
+            width: 100%;
+        }
+    }
+    .slide{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height:85vh;
+        h1,h2{
+            font-family: $font;
+            color: col(text);
+            text-align: center;
+        }
+        h1{
+            font-size: 6rem;
+            span{
+                animation: pop .3s ease alternate infinite;
+                @keyframes pop{
+                    0%{
+                        opacity: 0;
+                    }
+                    100%{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        h2{
+            font-size: 2rem;
+        }
+        #login-slide-btn{
+            width: 150px;
+            margin-top: 30px;
+            height: 50px;
+            background-color: col(text);
+            border: 2px solid white;
+            color: col(bg);
+            font-family: $font;
+            font-size: 1.5em;
+            font-weight: 900;
+            border-radius: 10px;
+            transition: .1s ease-in;
+            &:hover{
+                background-color: col(bg);
+                color: col(text);
+            }
+        }
+        @include tablet{
+            h1{
+                font-size: 5rem;
+            }
+            h2{
+                font-size: 1.5rem;
+            }
+        }
+        @include lMobile{
+            h1{
+                font-size: 3rem;
+            }
+            h2{
+                font-size: 1rem;
+            }
+        }
+    }
+    .userCred{
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1000;
+        transform: translate(-50%,-50%);
+        align-items: center;
+        background-color: col(bg);
+        width: 50%;
+        height: 20vh;
+        gap: 20px;
+        flex-direction: column;
+        border-radius: 20px;
+        justify-content: center;
+        img{
+            cursor: pointer;
+            position: relative;
+        }
+        h1{
+            color: col(text);
+            text-align: center;
+            font-family: $font;
+        }
+        @include mMobile(){
+            font-size: .7rem;
+        }
+    }
+    &-hero-section{
+        width: 95%;
+        height: 86vh;
+        margin: 20px auto;
+        background-image: url("/assets/image 1.png");
+        background-size: contain;
+        padding: 20px;
+        color: col(text);
+        font-family: $font;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 30px;
+        border: 10px dotted white;
+        justify-content: center;
+        &-top{
+            position: relative;
+            top: 50px;
+            left: 321.45px;
+            z-index: -1;
+        }
+        h1{
+            font-size: 9em;
+            font-weight: 200;  
+        }
+        &-bot{
+            position: relative;
+            right: 320px;
+            bottom: 50px;
+            z-index: -1;
+        }
+        @keyframes heartbeat{
+            0%{
+                transform: scale(1);
+                
+            }
+            10%{
+                transform: scale(1.1);
+            }
+            20%{
+                transform: scale(1);
+            }
+            30%{
+                transform: scale(1.1);
+            }
+            40%{
+                transform: scale(1);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+        h3{
+            font-size: 2em;
+            font-weight: 100;
+        }
+        button{
+            width: 150px;
+            height: 50px;
+            border: none;
+            margin-top: 30px;
+            border-radius: 30px;
+            background-color: col(text);
+            font-family: $font;
+            font-weight: 900;
+            font-size: 1.1em;
+            transition: .2s ease;
+            animation: heartbeat 1s ease infinite;
+            &:hover{
+                background-color: rgb(255, 189, 189);
+            }
+        }
+        @include tablet(){
+            &-top{
+                position: relative;
+                top: 33px;
+                left: 214px;
+                z-index: -1;
+            }
+            h1{
+                font-size: 6em;
+            }
+            &-bot{
+                position: relative;
+                right: 213px;
+                bottom: 32px;
+                z-index: -1;
+            }
+            h3{
+                font-size: 1.5em;
+            }
+        }
+        @include tabletmid(){
+            height: 70vh;
+            &-top{
+                position: relative;
+                top: 25px;
+                left: 143px;
+                z-index: -1;
+            }
+            h1{
+                font-size: 4em;
+            }
+            &-bot{
+                position: relative;
+                right: 143px;
+                bottom: 25px;
+                z-index: -1;
+            }
+        }
+        @include lMobile(){
+            height: 60vh;
+            &-top{
+                position: relative;
+                top: 15px;
+                left: 107px;
+                z-index: -1;
+            }
+            h1{
+                font-size: 3em;
+            }
+            &-bot{
+                position: relative;
+                right: 107px;
+                bottom: 15px;
+                z-index: -1;
+            }
+            h3{
+                font-size: 1.1em;
+                font-weight: 100;
+            }
+        }
+    }
+    &-what-we-do-section {
+        display: flex;
+        flex-direction: column;
+        background-color: col(text-light);
+        width: 95%;
+        margin: auto;
+        height: auto;
+        padding: 20px;
+        border-radius: 30px;
+        align-items: center;
+        color: col(text);
+        font-family: $font;
+        overflow: hidden;
+    
+        &-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); // 3 equal columns
+            grid-template-rows: auto auto; // Two rows
+            gap: 10px;
+    
+            div:nth-child(1) {
+                grid-column: 1; // Occupies the first column in the first row
+                grid-row: 1; // First row
+            }
+    
+            div:nth-child(2) {
+                grid-column: 2; // Occupies the second column in the first row
+                grid-row: 1; // First row
+            }
+    
+            div:nth-child(3) {
+                grid-column: 3; // Occupies the third column in the first row
+                grid-row: 1; // First row
+            }
+    
+            div:nth-child(4) {
+                grid-column: 1 / span 2; // Spans columns 1 and 2 in the second row
+                grid-row: 2; // Second row
+            }
+    
+            div:nth-child(5) {
+                grid-column: 3; // Occupies the third column in the second row
+                grid-row: 2; // Second row
+            }
+    
+            div {
+                padding: 20px;
+                border-radius: 20px;
+                background-color: rgb(0, 0, 0);
+                text-align: center;
+    
+                img {
+                    border-radius: 20px;
+                    width: 100%;
+                    height: 300px;
+                }
+                transition: .2s ease;
+                &:hover{
+                    transform: scale(1.01);
+                }
+            }
+        }
+        @include mLaptop(){
+            &-grid {
+                grid-template-columns: repeat(2, 1fr); // Switch to 2 columns
+                grid-template-rows: auto auto auto; // 3 rows for better spacing
+        
+                div:nth-child(1) {
+                    grid-column: 1; // First column
+                    grid-row: 1; // First row
+                }
+        
+                div:nth-child(2) {
+                    grid-column: 2; // Second column
+                    grid-row: 1; // First row
+                }
+        
+                div:nth-child(3) {
+                    grid-column: 1 / span 2; // Spans both columns
+                    grid-row: 2; // Second row
+                }
+        
+                div:nth-child(4) {
+                    grid-column: 1; // First column
+                    grid-row: 3; // Third row
+                }
+        
+                div:nth-child(5) {
+                    grid-column: 2; // Second column
+                    grid-row: 3; // Third row
+                }
+            }
+        }
+        @include tabletmid(){
+            &-grid {
+                grid-template-columns: 1fr; // Single column layout
+                grid-template-rows: auto; // Automatically adjust rows for each item
+        
+                // Reset the positioning for each child
+                div:nth-child(1) {
+                    grid-column: 1; // Occupies the single column
+                    grid-row: 1; // First row
+                }
+        
+                div:nth-child(2) {
+                    grid-column: 1; // Occupies the single column
+                    grid-row: 2; // Second row
+                }
+        
+                div:nth-child(3) {
+                    grid-column: 1; // Occupies the single column
+                    grid-row: 3; // Third row
+                }
+        
+                div:nth-child(4) {
+                    grid-column: 1; // Occupies the single column
+                    grid-row: 4; // Fourth row
+                }
+        
+                div:nth-child(5) {
+                    grid-column: 1; // Occupies the single column
+                    grid-row: 5; // Fifth row
+                }
+            }
+        }
+    }
+    &-about-us-section{
+        display: flex;
+        width: 95%;
+        margin: 10px auto;
+        flex-direction: column;
+        padding: 20px;
+        color: col(text);
+        font-family: $font;
+        border-radius: 30px;
+        background-color: col(text-light);
+        h1{
+            text-align: center;
+        }
+        &-contents{
+            display: flex;
+            &-left{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                p{
+                    width: 80%;
+                    font-size: 1.5em;
+                }
+                &-members{
+                    display: flex;
+                    gap: 50px;
+                    button{
+                        width: 150px;
+                        height: 50px;
+                        border-radius: 30px;
+                        border: none;
+                        font-family: $font;
+                        font-size: 1.1em;
+                        cursor: pointer;
+                        font-weight: 800;
+                        transition: .2s ease;
+                        &:hover{
+                            background-color: rgb(196, 196, 196);
+                        }
+                    }
+                }
+            }
+        }
+        @include mLaptop(){
+            &-contents{
+                display: flex;
+                &-left{
+                    p{
+                        font-size: 1.1em;
+                    }
+                    &-members{
+                        gap: 10px;
+                    }
+                }
+                &-right{
+                    img{
+                        width:300px;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        @include tablet(){
+            gap: 20px;
+            background-image: url("/assets/image 2.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            h1{
+                background-color: col(black-glass);
+                border-radius: 20px;
+            }
+            &-contents{
+
+                flex-direction: column;
+                &-left{
+                    background-color: col(black-glass);
+                    border-radius: 20px;
+                    padding: 20px;
+                    p{
+                        font-size: 1.1em;
+                    }
+                    &-members{
+                        gap: 10px;
+                        flex-direction: row;
+                    }
+                }
+                &-right{
+                    display: none;
+                }
+            }  
+        }
+        @include lMobile(){
+            &-contents{
+                &-left{
+                    p{
+                        width: 95%;
+                        font-size: 1.1em;
+                    }
+                    &-members{
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+    &-about-us-card{
+        width: 95%;
+        margin: auto;
+        background-color: gray;
+        border-radius: 30px;
+        overflow: hidden;
+        margin-top: 40px;
+        img{width: 100%;}
+    }
+    footer{
+        display: flex;
+        color: col(text);
+        font-family: $font;
+        justify-content: space-between;
+        padding: 30px;
+        h2{
+            font-weight: 100;
+        }
+        @include tablet(){
+            h2{
+                font-size: 1.1em;
+            }
+        }
+        @include lMobile(){
+            h2{
+                font-size: .8em;
+            }
+        }
+    }
+}

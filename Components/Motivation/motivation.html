@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulsePod-Motivation</title>
+    <link rel="icon" href="/assets/cardiogram.png" type="image/png">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <div class="preloader">
+        <img src="/assets/cardiogram.png" alt="PulsePod">
+    </div>
+    <div class="home">
+        <div class="home-navigation">
+            <h1 id="check">PulsePod</h1>
+            <div class="menu">
+                <img src="/assets/menu (1).png" alt="Menu" title="Menu" id="menu">
+                <ul class="menu-list" id="menu-list">
+                    <li><a href="/Components/Home/Home.html">Home</a></li>
+                    <li><a href="/Components/Task-Manager/task-manager.html">Task Manager</a></li>
+                    <li><a href="/Components/Health-hub/health-hub.html">Health Hub</a></li>
+                    <li><a href="/Components/Education-hub/Education-hub.html">Education Hub</a></li>
+                    <li><a href="/Components/Pomodoro/pomodoro.html">Pomodoro</a></li>
+                    <li id="myProfile"><a href="#">My Profile</a></li>
+                    <li id="signoutbtn"><a href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="userCred">
+            <img src="/assets/close (1).png" alt="Close" title="Close" id="userCred-close-btn" width="20px"
+                height="20px">
+            <h1 id="userCred-Username"></h1>
+        </div>
+        <div class="Motivation-Container" id="Motivation-Container">
+            <div class="Motivation-Container-head">
+                <select name="Motivation-sort" id="Motivation-sort-btn">
+                    <option value="All">All</option>
+                    <option value="Health">Health</option>
+                    <option value="Hope">Hope</option>
+                    <option value="Love">Love</option>
+                    <option value="Education">Education</option>
+                    <option value="Friendship">Friendship</option>
+                    <option value="Other">Other</option>
+                </select>
+                <div class="Motivation-Container-head-items">
+                    <h1 id="Motivation-add-ref">Motivations</h1>
+                    <div class="add-motivation">
+                        <img src="/assets/add (1).png" alt="Add" title="Add" width="25px" height="25px"
+                            id="add-motivation-btn">
+                    </div>
+                </div>
+            </div>
+            <div class="Motivation-Container-list">
+                <div class="Motivation-Container-list-out item">
+                    <div class="Motivation-Container-list-out-top">
+                        <img src="/assets/dustbin (1).png" alt="Delete" title="Delete" id="Motivation-item-delete-btn"
+                            width="35px" height="35px">
+                        <h1>UsernameIsSharan</h1>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, cumque! Rerum
+                        accusamus,
+                        reprehenderit amet totam nesciunt expedita sapiente earum in obcaecati sit incidunt, facilis
+                        quibusdam, doloribus excepturi quos perspiciatis ad!</p>
+                    <div class="Motivation-Container-list-out-bot">
+                        <h4>Type: Friendship</h4>
+                        <h3>by Arnold Schwadrznker</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="Motivation-Container-add-Tab">
+                <div class="Motivation-Container-add-Tab-top">
+                    <img src="/assets/close (1).png" alt="Close" title="Close"
+                        id="Motivation-Container-add-Tab-close-btn" width="20px" height="20px">
+                    <div class="Motivation-Container-add-Tab-top-head">
+                        <h1>Add a Motivation</h1>
+                    </div>
+                </div>
+                <div class="Motivation-Container-add-Tab-mid">
+                    <h1>Motivation</h1>
+                    <h3>Add your motivation</h3>
+                    <input type="text" id="Motivation-Container-add-Tab-Title" placeholder="Write a Title">
+                    <textarea class="custom-textarea" id="Motivation-Container-add-Tab-motivation"
+                        placeholder="Enter your text here..."></textarea>
+                    <input type="text" id="Motivation-Container-add-Tab-Author" placeholder="Told By">
+                    <select name="Motivation-type" id="Motivation-type">
+                        <option value="Health">Health</option>
+                        <option value="Hope">Hope</option>
+                        <option value="Love">Love</option>
+                        <option value="Education">Education</option>
+                        <option value="Friendship">Friendship</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="Motivation-Container-add-Tab-bot">
+                    <button id="motivation-submit-button">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="DataM.js"></script>
+    <script src="motivation.js"></script>
+    <script>
+        let userCreds = JSON.parse(sessionStorage.getItem("user-creds"));
+        let userInfo = JSON.parse(sessionStorage.getItem("user-insfo"))
+
+        let msgHead = document.getElementById('userCred-Username');
+        let SignoutBtn = document.getElementById('signoutbtn');
+
+        let Signout = () => {
+            sessionStorage.removeItem("user-creds");
+            sessionStorage.removeItem("user-insfo");
+            window.location.href = "/index.html";
+        }
+
+        let checkedCred = () => {
+            if (!sessionStorage.getItem("user-creds")) {
+                window.location.href = "/index.html";
+            }
+            else {
+                msgHead.innerText = `Username: ${userInfo.Username}`;
+            }
+        }
+        window.addEventListener('load', checkedCred);
+        SignoutBtn.addEventListener('click', Signout);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,562 @@
+.home{
+    .task-manager-container{
+        background-color: col(bla);
+        width: 95%;
+        margin: 20px auto;
+        height: fit-content;
+        padding: 10px 20px;
+        max-height: 85vh;
+        display: flex;
+        flex-direction: column;
+        border-radius: 30px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        &::-webkit-scrollbar{
+            width: 0px;
+        }
+        &-nav{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            input{
+                flex-grow: 1;
+                background-color: col(main-bg);
+                border: none;
+                border-radius: 30px;
+                padding: 10px 20px;
+                width: 40%;
+                color: col(text);
+                font-family: $font;
+                font-size: 1.1em;
+                outline: none;
+                cursor: pointer;
+                &::placeholder{
+                    color: col(text);
+                    font-family: $font;
+                }
+                transition: .2s ease;
+                &:hover{
+                    background-color: col(card);
+                }
+            }
+            button{
+                cursor: pointer;
+                flex-grow: 1;
+                background-color: col(main-bg);
+                border: none;
+                font-family: $font;
+                color: col(text);
+                font-size: 1.1em;
+                padding: 5px 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                transition: .2s ease;
+                &:hover{
+                    background-color: col(card);
+                }
+            }
+            h1{
+                flex-grow: 1;
+                cursor: default;
+                font-family: $font;
+                color: col(text);
+                font-size: 1em;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: col(main-bg);
+                padding: 5px 10px;
+                gap: 5px;
+                border-radius: 10px;
+            }
+            select{
+                cursor: pointer;
+                flex-grow: 1;
+                background-color: col(main-bg);
+                outline: none;
+                border: none;
+                color: col(text);
+                font-family: $font;
+                width: fit-content;
+                border-radius: 10px;
+                padding: 5px 10px;
+                transition: .2s ease;
+                &:hover{
+                    background-color: col(card);
+                }
+            }
+        }
+        &-task-grid{
+            color: col(text);
+            font-family: $font;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+            .task-manager-container-task-item{
+                margin-top: 10px;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                border-radius: 15px;
+                background-color: col(card);
+                flex-direction: column;
+                padding: 10px;
+                &-details{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    
+                    gap: 10px;
+                    h5{
+                        padding: 5px 10px;
+                        border-radius: 30px;
+                        background-color: col(bg);
+                        flex-grow: 1;
+                        text-align: center;
+                    }
+                }
+                transition: .2s ease;
+                &:hover{
+                    transform: scale(1.01);
+                }
+                
+            }
+            @include tablet(){
+                grid-template-columns: repeat(3,1fr);
+            }
+            @include tabletmid(){
+                grid-template-columns: repeat(2,1fr);
+            }
+            @include mMobile(){
+                grid-template-columns: repeat(1,1fr);
+            }
+            #NoTF{
+                margin-top: 10px;
+            }
+
+        }
+        .task-manager-task-expanded-view{
+            background-color: col(card);
+            color: col(text);
+            font-family: $font;
+            margin-top: 10px;
+            padding: 10px;
+            display: none;
+            border-radius: 20px;
+            #task-expand-close-btn{
+                padding: 10px;
+                cursor: pointer;
+                background-color: transparent;
+                border: none;position: absolute;
+            }
+            h1{
+                text-align: center;
+            }
+            p{
+                padding: 20px;
+                background-color: col(bla);
+                border-radius: 20px;
+                margin-bottom: 10px;
+                max-height: 300px;
+                overflow-x: hidden;
+                overflow-y: scroll;
+                &::-webkit-scrollbar{
+                    width: 0px;
+                }
+                word-wrap: break-word;
+            }
+            .task-edit-con{
+                display: flex;
+                gap: 10px;
+                button{
+                    background-color: col(black-glass);
+                    border: none;
+                    cursor: pointer;
+                    border-radius: 20px;
+                    flex-grow: 1;
+                }
+            }
+            .expanded-task-manager-container-task-item-details{
+                display: grid;
+                margin-top: 20px;
+                grid-template-columns: repeat(2,1fr);
+                gap: 10px;
+                h5{
+                    border-radius: 20px;
+                    padding: 20px;
+                    text-align: center;
+                    background-color: col(bla);
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .task-manager-task-add-slide{
+        position: absolute;
+        display: none;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        background-color: col(text-light);
+        padding: 20px;
+        border-radius: 20px;
+        img{
+            cursor: pointer;
+        }
+        &-top{
+            color: col(text);
+            font-family: $font;
+            margin-top: -35px;
+            border-bottom: 2px solid white;
+            margin-bottom: 10px;
+            h1{
+                width: fit-content;
+                margin: auto;
+            }
+        }
+        &-mid{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            color: col(text);
+            font-family: $font;
+            h3{
+                font-weight: 200;
+            }
+            &-1{
+                margin-top: 5px;
+                display: flex;
+                gap: 10px;
+                input{
+                    background-color: col(bg);
+                    border: none;
+                    outline: none;
+                    color: col(text);
+                    padding: 10px 20px;
+                    font-family: $font;
+                    font-size: 1.1em;
+                    border-radius: 10px;
+                    &::placeholder{
+                        color: col(text);
+                    }
+                }
+                select{
+                    background-color: col(bg);
+                    color: col(text);
+                    font-family: $font;
+                    outline: none;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                }
+            }
+            &-2{
+                textarea{
+                    background-color: col(bg);
+                    border: none;
+                    outline: none;
+                    width: 100%;
+                    border-radius: 20px;
+                    padding: 10px 20px;
+                    color: col(text);
+                    font-size: 1.1em;
+                    font-family: $font;
+                    &::-webkit-scrollbar{
+                        width: 0px;
+                    }
+                    &::placeholder{
+                        color: col(text);
+                    }
+                }
+            }
+            &-3{
+                display: flex;
+                gap: 10px;
+                input{
+                    background-color: col(bg);
+                    border: none;
+                    outline: none;
+                    color: col(text);
+                    padding: 10px;
+                    font-family: $font;
+                    font-size: 1.1em;
+                    border-radius: 10px;
+                }
+                select{
+                    flex-grow: 1;
+                    background-color: col(bg);
+                    color: col(text);
+                    font-family: $font;
+                    outline: none;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                }
+            }
+            &-4{
+                display: flex;
+                select{
+                    flex-grow: 1;
+                    background-color: col(bg);
+                    color: col(text);
+                    font-family: $font;
+                    outline: none;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                }
+            }
+        }
+        &-bot{
+            display: flex;
+            margin-top: 5px;
+            button{
+                cursor: pointer;
+                flex-grow: 1;
+                height: 40px;
+                border-radius: 10px;
+                border: none;
+                background-color: col(bg);
+                color: col(text);
+                font-family: $font;
+                font-size: 1.1em;
+            }
+
+        }
+        @include tabletmid(){
+            width: 95%;
+            &-mid{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                
+                color: col(text);
+                font-family: $font;
+                h3{
+                    font-weight: 200;
+                }
+                &-1{
+                    margin-top: 5px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    input{
+                        background-color: col(bg);
+                        border: none;
+                        outline: none;
+                        color: col(text);
+                        padding: 10px 20px;
+                        font-family: $font;
+                        font-size: 1.1em;
+                        border-radius: 10px;
+                        &::placeholder{
+                            color: col(text);
+                        }
+                    }
+                    select{
+                        background-color: col(bg);
+                        color: col(text);
+                        font-family: $font;
+                        outline: none;
+                        border: none;
+                        padding: 10px 20px;
+                        border-radius: 10px;
+                    }
+                }
+                &-2{
+                    textarea{
+                        background-color: col(bg);
+                        border: none;
+                        outline: none;
+                        width: 100%;
+                        border-radius: 20px;
+                        padding: 10px 20px;
+                        color: col(text);
+                        font-size: 1.1em;
+                        font-family: $font;
+                        &::-webkit-scrollbar{
+                            width: 0px;
+                        }
+                        &::placeholder{
+                            color: col(text);
+                        }
+                    }
+                }
+                &-3{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    input{
+                        background-color: col(bg);
+                        border: none;
+                        outline: none;
+                        color: col(text);
+                        padding: 10px;
+                        font-family: $font;
+                        font-size: 1.1em;
+                        border-radius: 10px;
+                    }
+                    select{
+                        flex-grow: 1;
+                        background-color: col(bg);
+                        color: col(text);
+                        font-family: $font;
+                        outline: none;
+                        border: none;
+                        padding: 10px 20px;
+                        border-radius: 10px;
+                    }
+                }
+                &-4{
+                    display: flex;
+                    select{
+                        flex-grow: 1;
+                        background-color: col(bg);
+                        color: col(text);
+                        font-family: $font;
+                        outline: none;
+                        border: none;
+                        padding: 10px 20px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .task-manager-task-edit-slide{
+        position: absolute;
+        display: none;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        background-color: col(black-glass);
+        padding: 20px;
+        border-radius: 20px;
+        img{
+            cursor: pointer;
+        }
+        &-top{
+            color: col(text);
+            font-family: $font;
+            margin-top: -35px;
+            border-bottom: 2px solid white;
+            margin-bottom: 10px;
+            h1{
+                width: fit-content;
+                margin: auto;
+            }
+        }
+        &-mid{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            color: col(text);
+            font-family: $font;
+            h3{
+                font-weight: 200;
+            }
+            &-1{
+                margin-top: 5px;
+                display: flex;
+                gap: 10px;
+                input{
+                    background-color: col(bg);
+                    border: none;
+                    outline: none;
+                    color: col(text);
+                    padding: 10px 20px;
+                    font-family: $font;
+                    font-size: 1.1em;
+                    border-radius: 10px;
+                    &::placeholder{
+                        color: col(text);
+                    }
+                }
+                select{
+                    background-color: col(bg);
+                    color: col(text);
+                    font-family: $font;
+                    outline: none;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                }
+            }
+            &-2{
+                textarea{
+                    background-color: col(bg);
+                    border: none;
+                    outline: none;
+                    width: 100%;
+                    border-radius: 20px;
+                    padding: 10px 20px;
+                    color: col(text);
+                    font-size: 1.1em;
+                    font-family: $font;
+                    &::-webkit-scrollbar{
+                        width: 0px;
+                    }
+                    &::placeholder{
+                        color: col(text);
+                    }
+                }
+            }
+            &-3{
+                display: flex;
+                gap: 10px;
+                input{
+                    background-color: col(bg);
+                    border: none;
+                    outline: none;
+                    color: col(text);
+                    padding: 10px;
+                    font-family: $font;
+                    font-size: 1.1em;
+                    border-radius: 10px;
+                }
+                select{
+                    flex-grow: 1;
+                    background-color: col(bg);
+                    color: col(text);
+                    font-family: $font;
+                    outline: none;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                }
+            }
+            &-4{
+                display: flex;
+                select{
+                    flex-grow: 1;
+                    background-color: col(bg);
+                    color: col(text);
+                    font-family: $font;
+                    outline: none;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                }
+            }
+        }
+        &-bot{
+            display: flex;
+            margin-top: 5px;
+            button{
+                cursor: pointer;
+                flex-grow: 1;
+                height: 40px;
+                border-radius: 10px;
+                border: none;
+                background-color: col(bg);
+                color: col(text);
+                font-family: $font;
+                font-size: 1.1em;
+            }
+
+        }
+    }
+}
