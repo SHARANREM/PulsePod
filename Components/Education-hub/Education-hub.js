@@ -71,13 +71,16 @@ filterbtn.addEventListener("click",()=>{
     fitertypebtn.style.display = fitertypebtn.style.display === "block" ? "none" : "block";
     fiterratingbtn.style.display = fiterratingbtn.style.display === "block" ? "none" : "block";
 });
+let lisim = false;
 gridlistbtn.addEventListener("click",()=>{
-    if(gridlistimg.src.includes("app")){
+    if(lisim){
         gridlistimg.src ="/assets/menu (3).png";
         changegirdlist.classList = "Health-hub-container-grid";
+        lisim = false;
     } else{
         gridlistimg.src = "/assets/app (1).png";
         changegirdlist.classList = "Health-hub-container-list";
+        lisim = true;
     }
 })
 viewbtn.addEventListener("click",()=>{
