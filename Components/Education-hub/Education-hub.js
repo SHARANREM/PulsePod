@@ -96,5 +96,12 @@ addtipslideclosebtn.addEventListener("click",()=>{
     changegirdlist.style.display = "";
 })
 
-
-//Database
+document.addEventListener("keydown", (event) => {
+    if (event.key.toLowerCase() === "g") {
+        gridlistimg.src ="/assets/menu (3).png";
+        changegirdlist.classList = "Health-hub-container-grid";
+    } else if (event.key.toLowerCase() === "l") {
+        gridlistimg.src = "/assets/app (1).png";
+        changegirdlist.classList = "Health-hub-container-list";
+    }
+});
